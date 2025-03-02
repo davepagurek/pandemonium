@@ -1,0 +1,115 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	height: 100%;
+  background-color: black;
+}
+
+/* OPC */
+#opc-control-panel {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	padding: 1em;
+	background-color: #ffffff;
+	color: #333;
+	border: 1px solid #000000;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+	z-index: 9999;
+	width: 300px;
+	display: flex;
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	flex-direction: column;
+  color: black;
+  background-color: white;
+}
+button, input[type="button"] {
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+  border: 0;
+  font-size: 13px;
+  padding: 10px;
+  background-color: #9ebdff;
+  border-radius: 20px;
+}
+button:hover, input[type="button"]:hover {
+  background-color: #bed1fa;
+}
+input[type="range"] {
+  flex: 1;
+  widtH: 50px;
+}
+
+#opc-control-panel .opc-control-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1em;
+}
+
+#opc-control-panel .opc-control-wrapper:last-child {
+	margin-bottom: 0;
+}
+
+#opc-control-panel .opc-control {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	padding: 0 0.5em;
+	min-height: 2em;
+}
+
+#opc-control-panel .opc-control label {
+	flex: 0 0 30%;
+}
+
+#opc-control-panel .opc-description {
+	color: #666;
+	margin-bottom: 0.3em;
+	font-size: 0.9em;
+}
+
+#opc-control-panel input {
+	display: block;
+	margin-left: auto;
+}
+
+#opc-control-panel input[type=number] {
+	width: 3em;
+	padding: 5px;
+	margin-right: 3px;
+}
+
+#opc-control-panel input[type=checkbox] {
+	transform: scale(1.2);
+}
+
+#opc-control-panel input[type=text] {
+	flex: 1;
+}
+
+#opc-control-panel input[type=button] {
+	flex: 1;
+}
+
+#opc-control-panel .opc-palette-container {
+	flex: 1;
+}
+
+#opc-control-panel .opc-palette {
+	display: none;
+	min-height: 1.5em;
+}
+
+#opc-control-panel .opc-palette.active {
+	display: flex;
+}
+
+#opc-control-panel .opc-palette .opc-palette-color {
+	flex: 1;
+}
