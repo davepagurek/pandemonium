@@ -1,20 +1,4 @@
-
-
 let font
-
-let segmenter
-let capture
-let running
-
-let maskShader
-let warpShader
-let stampShader
-let bgPicker
-let picker
-let video
-let start
-
-let fbo
 
 OPC.slider({
 	name: 'maxR',
@@ -33,17 +17,14 @@ OPC.slider({
 OPC.button('myButton', 'Save Image')
 
 
-
 let cam
 let tapped = false
 let first = true
+let doStamp = false
 
 function preload() {
 	font = loadFont('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZhrib2Bg-4.ttf')
 }
-
-let doStamp = false
-let warp
 
 const pandemonium = new Pandemonium()
 
@@ -89,8 +70,6 @@ function draw() {
 	clear()
   image(cam, 0, 0, pandemonium.width(), pandemonium.height(), 0, 0, cam.width, cam.height, COVER)
   pandemonium.draw()
-	// image(fg2, 0, 0)
-	// image(fbo, 0, 0)
 	if (!tapped) {
 		push()
 		noStroke()
