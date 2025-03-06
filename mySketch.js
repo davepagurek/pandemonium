@@ -29,6 +29,8 @@ function preload() {
 const pandemonium = new Pandemonium()
 
 async function setup() {
+  document.getElementById('opc-control-panel').addEventListener('click', (e) => { e.stopPropagation() })
+
   createCanvas(windowWidth, windowHeight, WEBGL)
 	pixelDensity(1)
 	const isMobile = window.navigator.userAgent && /Mobi|Android/i.test(window.navigator.userAgent)
