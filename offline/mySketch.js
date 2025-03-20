@@ -35,7 +35,7 @@ async function setup() {
   container.style('display', 'flex')
   container.style('flex-direction', 'column')
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 5; i++) {
     inputs[i] = createFileInput((file) => {
       if (file.type === 'image') {
         imgs[i] = createImg(file.data, '');
